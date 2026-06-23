@@ -1,48 +1,53 @@
-// Mock data for Faith Model Public School - Annual Voting.
-// Avatars are generated on the fly by DiceBear (https://dicebear.com),
-// so no binary images need to be stored in the repo.
+// Real candidates for Faith Model Public School - Annual Voting.
+// Names + roles are taken from the image files in
+// frontend/public/canditates/  (filename format: "Name(Role).ext").
+// Photos are served by the frontend from that public folder.
 
-const avatar = (seed, bg) =>
-  `https://api.dicebear.com/9.x/avataaars/svg?seed=${encodeURIComponent(
-    seed
-  )}&radius=18&backgroundColor=${bg}`;
+const img = (file) => encodeURI(`/canditates/${file}`);
 
 // Four school houses with their theme colors.
 export const HOUSES = [
-  { key: "aravali", name: "Aravali House", color: "#16a34a", soft: "#dcfce7" },
-  { key: "nilgiri", name: "Nilgiri House", color: "#2563eb", soft: "#dbeafe" },
-  { key: "shivalik", name: "Shivalik House", color: "#dc2626", soft: "#fee2e2" },
-  { key: "udaygiri", name: "Udaygiri House", color: "#d97706", soft: "#fef3c7" },
+  { key: "red_riders", name: "Red Riders", color: "#dc2626", soft: "#fee2e2" },
+  { key: "flying_squad", name: "Flying Squad", color: "#2563eb", soft: "#dbeafe" },
+  { key: "honey_warriors", name: "Honey Warriors", color: "#d97706", soft: "#fef3c7" },
+  { key: "power_rangers", name: "Power Rangers", color: "#16a34a", soft: "#dcfce7" },
 ];
 
-// category: 'head_boy' | 'head_girl' | 'house_leader'
+// category: 'head_boy' | 'head_girl' | 'discipline_leader' | 'sports_mentor' | 'house_leader'
 // house: only set for house_leader candidates.
 export const CANDIDATES = [
-  // ---- Head Boy (4) ----
-  { name: "Aarav Sharma", category: "head_boy", house: null, photo: avatar("Aarav Sharma", "b6e3f4") },
-  { name: "Vivaan Gupta", category: "head_boy", house: null, photo: avatar("Vivaan Gupta", "c0aede") },
-  { name: "Aditya Verma", category: "head_boy", house: null, photo: avatar("Aditya Verma", "ffd5dc") },
-  { name: "Kabir Singh", category: "head_boy", house: null, photo: avatar("Kabir Singh", "ffdfbf") },
+  // ---- Head Boy ----
+  { name: "Hasid", category: "head_boy", house: null, photo: img("Hasid(Headboy).avif") },
+  { name: "Owais", category: "head_boy", house: null, photo: img("Owais(Headboy).jpg") },
+  { name: "Sithesh", category: "head_boy", house: null, photo: img("Sithesh(headboy).avif") },
 
-  // ---- Head Girl (4) ----
-  { name: "Ananya Iyer", category: "head_girl", house: null, photo: avatar("Ananya Iyer", "ffd5dc") },
-  { name: "Diya Patel", category: "head_girl", house: null, photo: avatar("Diya Patel", "b6e3f4") },
-  { name: "Saanvi Reddy", category: "head_girl", house: null, photo: avatar("Saanvi Reddy", "d1d4f9") },
-  { name: "Ishita Nair", category: "head_girl", house: null, photo: avatar("Ishita Nair", "c0aede") },
+  // ---- Head Girl ----
+  { name: "Afrah Tanzeel", category: "head_girl", house: null, photo: img("Afrah Tanzeel(Headgirl).png") },
+  { name: "Ayesha Begum", category: "head_girl", house: null, photo: img("Ayesha Begum(Headgirl).jpeg") },
+  { name: "Sadhiya", category: "head_girl", house: null, photo: img("Sadhiya(HEadgirl).png") },
 
-  // ---- House Leaders: Aravali (2) ----
-  { name: "Rohan Mehta", category: "house_leader", house: "aravali", photo: avatar("Rohan Mehta", "dcfce7") },
-  { name: "Arjun Rao", category: "house_leader", house: "aravali", photo: avatar("Arjun Rao", "bbf7d0") },
+  // ---- Discipline Leader ----
+  { name: "Hafsa Mariyam", category: "discipline_leader", house: null, photo: img("Hafsa MAriyam(DiscLeader).jpg") },
+  { name: "Shruthi", category: "discipline_leader", house: null, photo: img("Shruthi(DiscLeader).png") },
+  { name: "Syed Ishain", category: "discipline_leader", house: null, photo: img("Syed Ishain(DiscLeader).png") },
 
-  // ---- House Leaders: Nilgiri (2) ----
-  { name: "Karan Malhotra", category: "house_leader", house: "nilgiri", photo: avatar("Karan Malhotra", "dbeafe") },
-  { name: "Dev Joshi", category: "house_leader", house: "nilgiri", photo: avatar("Dev Joshi", "bfdbfe") },
+  // ---- Sports Mentor ----
+  { name: "Faizullah", category: "sports_mentor", house: null, photo: img("Faizullah(Sportsmentor).avif") },
+  { name: "Nuha Mufliha", category: "sports_mentor", house: null, photo: img("Nuha Mufliha(Sportsmentor).png") },
 
-  // ---- House Leaders: Shivalik (2) ----
-  { name: "Nikhil Bose", category: "house_leader", house: "shivalik", photo: avatar("Nikhil Bose", "fee2e2") },
-  { name: "Meera Kapoor", category: "house_leader", house: "shivalik", photo: avatar("Meera Kapoor", "fecaca") },
+  // ---- House Leaders: Red Riders ----
+  { name: "Aidha Naseem", category: "house_leader", house: "red_riders", photo: img("Aidha Naseem(Red Riders).jpeg") },
+  { name: "Jaza Mariyam", category: "house_leader", house: "red_riders", photo: img("Jaza Mariyam(Red Riders).webp") },
 
-  // ---- House Leaders: Udaygiri (2) ----
-  { name: "Aryan Khanna", category: "house_leader", house: "udaygiri", photo: avatar("Aryan Khanna", "fef3c7") },
-  { name: "Veer Chauhan", category: "house_leader", house: "udaygiri", photo: avatar("Veer Chauhan", "fde68a") },
+  // ---- House Leaders: Flying Squad ----
+  { name: "Aneeqa", category: "house_leader", house: "flying_squad", photo: img("Aneeqa(FlyingSquad).jpg") },
+  { name: "Mariyam Khashiya", category: "house_leader", house: "flying_squad", photo: img("Mariyam Khashiya(FlyingSquad).png") },
+
+  // ---- House Leaders: Honey Warriors ----
+  { name: "Fabia Christy", category: "house_leader", house: "honey_warriors", photo: img("Fabia Christy(Honey Warriors).png") },
+  { name: "Rija", category: "house_leader", house: "honey_warriors", photo: img("Rija(Honey Warriors).jpg") },
+
+  // ---- House Leaders: Power Rangers ----
+  { name: "Rinaz", category: "house_leader", house: "power_rangers", photo: img("Rinaz(Power Rangers).jpeg") },
+  { name: "Shazana Fathima", category: "house_leader", house: "power_rangers", photo: img("Shazana Fathima(Power Rangers).jpeg") },
 ];
