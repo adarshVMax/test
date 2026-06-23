@@ -45,7 +45,7 @@ export const CANDIDATES = [
 
   // ---- House Leaders: Honey Warriors ----
   { name: "Fabia Christy", category: "house_leader", house: "honey_warriors", photo: img("Fabia Christy(Honey Warriors).png") },
-  { name: "Rija", category: "house_leader", house: "honey_warriors", photo: img("Rija(Honey Warriors).jpg") },
+  { name: "Rija Fathima", category: "house_leader", house: "honey_warriors", photo: img("Rija(Honey Warriors).jpg") },
 
   // ---- House Leaders: Power Rangers ----
   { name: "Rinaz", category: "house_leader", house: "power_rangers", photo: img("Rinaz(Power Rangers).jpeg") },
