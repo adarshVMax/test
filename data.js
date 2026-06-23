@@ -29,7 +29,7 @@ export const CANDIDATES = [
   // ---- Discipline Leader ----
   { name: "Hafsa Mariyam", category: "discipline_leader", house: null, photo: img("Hafsa MAriyam(DiscLeader).jpg") },
   { name: "Shruthi", category: "discipline_leader", house: null, photo: img("Shruthi(DiscLeader).png") },
-  { name: "Syed Ishain", category: "discipline_leader", house: null, photo: img("Syed Ishain(DiscLeader).png") },
+  { name: "Syed Ishaan", category: "discipline_leader", house: null, photo: img("Syed Ishain(DiscLeader).png") },
 
   // ---- Sports Mentor ----
   { name: "Faizullah", category: "sports_mentor", house: null, photo: img("Faizullah(Sportsmentor).avif") },
